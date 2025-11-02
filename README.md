@@ -30,13 +30,14 @@ It’s inspired by real workflows in the **energy storage sector**, but **uses o
 ---
 
 ##  Structure (pending)
+'''
 /data – synthetic / public product specs
 /queries – sample client requests
 /prompts – system + RAG templates
 /docs – documentation & checklists
 /notebooks – prototypes (LangFlow)
 /local-demo/ – local-only demo folder (excluded from Git)
-
+'''
 ---
 
 ## Project roadmap
