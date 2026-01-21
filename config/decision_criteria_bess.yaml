@@ -1,0 +1,25 @@
+  - id: technical_scale
+    label: Technical scale
+    purpose: Estimate the approximate size of the energy storage system.
+    questions:
+      - id: estimated_capacity
+        question_pl: >
+          Czy mają Państwo orientacyjne wyobrażenie o skali magazynu energii,
+          np. rzędu kilkudziesięciu kWh, kilkuset kWh lub więcej?
+        question_en: >
+          Do you have an approximate idea of the required energy capacity,
+          e.g. tens of kWh, hundreds of kWh, or more?
+
+      - id: estimated_power
+        question_pl: >
+          Czy znana jest orientacyjna moc instalacji lub przyłącza
+          (np. rzędu kilkudziesięciu lub kilkuset kW)?
+        question_en: >
+          Is the approximate system or grid connection power known
+          (e.g. tens or hundreds of kW)?
+
+      - id: scalability
+        question_pl: >
+          Czy istotna jest możliwość modułowej rozbudowy systemu w przyszłości?
+        question_en: >
+          Is future modular expansion of the system important?
