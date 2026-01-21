@@ -1,62 +1,107 @@
 # AI Offer Assistant
 
-This repository contains a **personal portfolio proof-of-concept** of an AI-powered assistant that helps teams prepare technical offers faster and more accurately.  
-It’s inspired by real workflows in the **energy storage sector**, but **uses only synthetic or public data**.
+This repository contains a **public portfolio proof-of-concept** of an AI-powered assistant
+that helps sales and technical teams **draft responses to client inquiries faster and more consistently**.
 
-> **Disclaimer**  
-> This project is a personal portfolio demo.  
-> It does **not** include any confidential, proprietary or internal data from any company.  
-> A separate, local-only demo folder is used for on-site presentations (excluded from Git).
+The project is inspired by real-world workflows in the **energy storage (BESS) sector**,
+but **uses only synthetic or publicly describable data**.
 
----
-
-## Goals
-- Reduce offer preparation time from ~45 minutes to a few minutes.  
-- Match client queries with product parameters and constraints.  
-- Generate structured offer drafts (Markdown/PDF).
+> **Disclaimer**
+> This is a personal portfolio project.
+> It does **not** contain any confidential, proprietary, or internal data from any company.
+> Real company materials (emails, datasheets, pricing) are **explicitly excluded** from this repository.
 
 ---
 
-## Tech Stack
+## Problem
+
+Responding to client emails and preparing initial offer drafts for energy storage systems often:
+- takes 30–60 minutes per inquiry,
+- requires manually checking product parameters,
+- involves translating non-technical client language into technical constraints.
+
+This creates a bottleneck for sales and pre-sales teams.
+
+---
+
+## Solution (MVP Scope)
+
+**AI Offer Assistant** demonstrates how a lightweight AI workflow can:
+
+- interpret a **non-technical client email**,
+- retrieve relevant product information from a small knowledge base,
+- generate a **structured draft response or offer** (Markdown),
+- highlight missing or unclear information.
+
+The goal is **draft acceleration**, not full automation.
+
+---
+
+## What This Demo Does
+
+- Input:  
+  - a synthetic client email (plain text, non-technical language),
+  - a small set of synthetic/public BESS product descriptions.
+- Output:
+  - draft response email / offer (Markdown),
+  - list of assumptions,
+  - checklist of missing client inputs.
+
+---
+
+## What This Demo Does NOT Do
+
+- ❌ No real customer data  
+- ❌ No real company products or pricing  
+- ❌ No internal sales processes  
+- ❌ No production deployment  
+
+---
+
+## Tech Stack (Planned for MVP)
+
 | Layer | Tool |
-|-------|------|
-| LLM | ...|
-| Embeddings | ... |
-| Vector DB | ... |
-| Orchestration | ... |
-| UI (optional) | ... |
-| Output | ... |
+|------|------|
+| LLM | OpenAI / compatible API (configurable) |
+| Embeddings | Sentence Transformers (local) |
+| Vector DB | Chroma (local folder) |
+| Orchestration | Python (simple scripts) |
+| UI | CLI or minimal Streamlit demo |
+| Output | Markdown files |
 
 ---
 
-## Structure (coming soon)
+## Repository Structure
 
-```
-/data – synthetic / public product specs  
-/queries – sample client requests  
-/prompts – system + RAG templates  
-/docs – documentation & checklists  
-/notebooks – prototypes (LangFlow / Jupyter)  
-/local-demo/ – local-only demo folder (excluded from Git)
-```
+/data – synthetic / public product descriptions
+/queries – sample client emails
+/prompts – prompt templates
+/docs – architecture, risks, business context
+/local-demo – local-only demo (excluded from Git)
+/scripts – ingestion and demo scripts
+/tests – basic validation tests
 
 ---
 
-## Project roadmap
-1. Stage 1 — Repository setup and documentation  
-2. Stage 2 — Add synthetic data and prompt templates  
-3. Stage 3 — RAG demo pipeline (LangFlow)  
-4. Stage 4 — PDF offer generation output
+## Roadmap
+
+1. Define MVP scope and documentation ✅  
+2. Add synthetic data and prompts  
+3. Implement minimal RAG pipeline  
+4. Generate draft offer responses  
 
 ---
 
 ## Author
-Joanna Widzińska
+
+Joanna Widzińska  
 LinkedIn: https://www.linkedin.com/in/joanna-widzi%C5%84ska/
+
 ---
 
-### Ready-to-Publish Notes
-- No company names, client data, or internal materials.  
-- Clean README with clear scope and structure.  
-- Safe for public portfolio presentation.  
-- Demonstrates awareness of ethical and data-protection standards.
+### Portfolio Notes
+
+- Public, safe-to-share repository  
+- Synthetic data only  
+- Focused on **practical business value**, not model complexity  
+- Designed as a starting point for company-specific adaptation
