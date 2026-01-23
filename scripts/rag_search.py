@@ -17,7 +17,7 @@ def load_text(path: Path) -> str:
     return text
 
 
-def shorten(text: str, max_chars: int = 400) -> str:
+def shorten(text: str, max_chars: int = 300) -> str:
     """
     Hard cut for readability.
     No summarization, no interpretation.
@@ -39,7 +39,7 @@ def extract_overlap(query: str, doc: str, max_terms: int = 5) -> list[str]:
 
 def get_rag_context(
     email_text: str,
-    top_k: int = 4,
+    top_k: int = 2,
     persist_dir: str = "chroma_db",
     collection_name: str = "bess_public",
     model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
@@ -112,7 +112,7 @@ def main() -> None:
     customer_email = load_text(email_path)
 
     log("Running RAG search...")
-    rag_context = get_rag_context(customer_email, top_k=4)
+    rag_context = get_rag_context(customer_email, top_k=2)
 
     print("\n=== RAG CONTEXT ===\n")
     print(rag_context)
