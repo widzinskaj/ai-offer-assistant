@@ -1,5 +1,6 @@
 # AI Sales Qualification Assistant for Energy Storage
 
+
 This repository contains a **portfolio-grade MVP** of an AI-powered assistant
 designed to support the **first response and qualification stage** of the sales process
 for **energy storage systems (BESS)**.
@@ -43,7 +44,19 @@ The assistant **does not** generate prices or final offers.
 Its role is to **support the salesperson**, not replace them.
 
 ---
+## System Overview (High-Level)
 
+The diagram below presents the high-level architecture and data flow of the MVP.
+It illustrates how an unstructured customer inquiry is transformed into a structured,
+explainable draft response using decision criteria and RAG-based contextual grounding.
+
+![RAG-based Sales Qualification System – High-Level Flow](docs/system-flow.png)
+
+The system is designed as a **decision-support tool** with clear boundaries:
+it assists sales engineers during early technical qualification without automating
+pricing, product selection, or final decisions.
+
+---
 ## Features & Capabilities
 
 **Signal Extraction**
